@@ -215,6 +215,8 @@ async function getSpaceD() {
   document.getElementById('anumb').textContent = number;
   document.getElementById('lat').textContent = latitude;
   document.getElementById('lon').textContent = longitude;
+
+  document.getElementById("demo").innerHTML = 'anumb' * 1 ;
 }
 
 getSpaceD();
@@ -240,7 +242,12 @@ app.stage.filters = [new KawaseBlurFilter(20, 7, true)];
 // Create orbs
 const orbs = [];
 
-for (let i = 0; i < 10; i++) {
+
+document.getElementById("demo1").innerHTML = 5 + 5 ;
+document.getElementById("demo2").innerHTML = "Hello Bob";
+
+
+for (let i = 0; i < 5; i++) {
   const orb = new Orb(colorPalette.randomColor());
 
   app.stage.addChild(orb.graphics);
