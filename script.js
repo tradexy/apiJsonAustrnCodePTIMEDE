@@ -200,26 +200,7 @@ const app = new PIXI.Application({
   getISS();
 */
 
-// ADDITIONAL22222 SECTION OF API ADDED HERE
-const api_url_astros = 'http://api.open-notify.org/astros.json'
-const api_url_whereiss = 'https://api.wheretheiss.at/v1/satellites/25544'
 
-async function getSpaceD() {
-  const response1 = await fetch(api_url_astros);
-  const data1 = await response1.json();
-  const { number } = data1;
-  const response2 = await fetch(api_url_whereiss);
-  const data2 = await response2.json();
-  const { latitude, longitude } = data2;
-
-  document.getElementById('anumb').textContent = number;
-  document.getElementById('lat').textContent = latitude;
-  document.getElementById('lon').textContent = longitude;
-
-  document.getElementById("demo").innerHTML = 'anumb' * 1 ;
-}
-
-getSpaceD();
 /* 
 // ADDITIONAL333333 SECTION OF API ADDED HERE
 const api_url = 'http://api.open-notify.org/iss-now.json'
@@ -243,8 +224,31 @@ app.stage.filters = [new KawaseBlurFilter(20, 7, true)];
 const orbs = [];
 
 
-document.getElementById("demo1").innerHTML = 5 + 5 ;
-document.getElementById("demo2").innerHTML = "Hello Bob";
+// ADDITIONAL22222 SECTION OF API ADDED HERE
+const api_url_astros = 'http://api.open-notify.org/astros.json'
+const api_url_whereiss = 'https://api.wheretheiss.at/v1/satellites/25544'
+
+async function getSpaceD() {
+  const response1 = await fetch(api_url_astros);
+  const data1 = await response1.json();
+  const { number } = data1;
+  const response2 = await fetch(api_url_whereiss);
+  const data2 = await response2.json();
+  const { latitude, longitude } = data2;
+
+  document.getElementById('anumb').textContent = number;
+  document.getElementById('lat').textContent = latitude;
+  document.getElementById('lon').textContent = longitude;
+  
+}
+
+getSpaceD();
+
+
+
+//BELOW 2 LINES CAN BE DELETED
+document.getElementById("demo3").innerHTML = 5 * 3 ;
+document.getElementById("demo4").innerHTML = "Hello Bob";
 
 
 for (let i = 0; i < 5; i++) {
