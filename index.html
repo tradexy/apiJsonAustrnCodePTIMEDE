@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - APIJsonGlassmorph</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<canvas class="orb-canvas"></canvas>
+<!-- Overlay -->
+<div class="overlay">
+  <!-- Overlay inner wrapper -->
+  <div class="overlay__inner">
+    <!-- Title -->
+    <h1 class="overlay__title">
+      This is a 
+      <span class="text-gradient">generative</span> UI just with <span class="text-gradient">JSON</span> data from an API. Loading JSON data with <span class="text-gradient">fetch()</span> and update DOM element.
+    </h1>
+    <!-- Description -->
+    <p class="overlay__description">
+      The “orb” animation uses
+      pixi.js, with a button to choose random colours, in
+      a frosty UI. 
+      Current coordinates of the International Space Station are given below and the number 
+      of orbs represents the number of 
+      astronaunts currently in the ISS. 
+      As per https://wheretheiss.at and http://open-notify.org/
+      <br>
+      <strong>Where is the ISS?</strong><br>
+       latitude: <span id="lat"></span>
+    <br>longitude: <span id="lon"></span>
+    <br>number: <span id="anumb"></span></p>   
+  
+ <!--  <p> See API tutorial in this URL https://www.youtube.com/watch?v=uxf0--uiX0I </p>
+ --> 
+    <!-- Buttons -->
+    <div class="overlay__btns">
+      <button class="overlay__btn overlay__btn--transparent">
+        Timed App
+      </button>
+      <button class="overlay__btn overlay__btn--colors">
+        <span>Randomise Colours</span>
+        <span class="overlay__btn-emoji">🎨</span>
+      </button>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+  <script type="module" src="./script.js"></script>
+
+</body>
+</html>
