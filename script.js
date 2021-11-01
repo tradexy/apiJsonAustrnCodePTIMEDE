@@ -236,7 +236,7 @@ async function getSpaceD() {
   const data2 = await response2.json();
   const { latitude, longitude } = data2;
 
-  document.getElementById('anumb').textContent = number;
+  document.getElementById('anumb').innerHTML = number;
   document.getElementById('lat').textContent = latitude;
   document.getElementById('lon').textContent = longitude;
   
